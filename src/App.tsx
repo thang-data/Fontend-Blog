@@ -16,6 +16,8 @@ import io from 'socket.io-client'
 
 import SocketClient from './SocketClient'
 
+import { API_URL } from './utils/config'
+
 
 const App = () => {
   const dispatch = useDispatch()
@@ -27,7 +29,7 @@ const App = () => {
   },[dispatch])
 
   useEffect(() => {
-    const socket = io()
+    const socket = io(API_URL)
     dispatch({ type: 'SOCKET', payload: socket })
     return () => { socket.close() }
   },[dispatch])
