@@ -109,6 +109,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.18.9",
     "@types/react-router-dom": "^5.1.7"
   },
   "jest": {
